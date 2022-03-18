@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Ballmer Peak
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Installation 
 
-In the project directory, you can run:
+* Make sure your local machine is set up for React development (NodeJS, Git, Code Editor). 
+* Checkout the project with Git to your local machine. 
+  * Optional: First fork the project to your own Github account if available.
+* Install the NPM dependencies.
+* Start the dev server.
 
-### `npm start`
+## Interview tasks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Please choose one of the following tasks. 
+Optional: If you finish the first one in time, you may of course take another. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Infrastructure task
 
-### `npm test`
+The test suite currently throws an error. 
+Please make all existing tests pass.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### UX task 
 
-### `npm run build`
+The users detail page currently only shows the raw data. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Please display name, email, phone and company name of the current user in a nicely formatted way.
+You may use the already installed [MUI library](https://mui.com/) or choose to roll your own styling via the installed [Emotion library](https://emotion.sh/) or simple CSS styling. The technical side is entirely up to you. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Code quality task
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The code quality in the current project *can be improved* to put it mildly. 
 
-### `npm run eject`
+Please identify code pieces lacking quality, then describe the existing problem and your suggested solution. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Bonus: Try to improve some of the pieces with live coding. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Bonus: Also keep in mind, the project will grow over time and is planned to contain dozens of individual pages. 
+So also try to identify issues with the underlying architecture, that will probably bite the project later and suggest improvements. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Feature task
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+On the user detail page we need to also display the open TODOs for each user. 
 
-## Learn More
+Study the API on https://jsonplaceholder.typicode.com/ and add the described feature to the page. 
+Some basic styling is required (no "JSON.stringify"), but it does not have to look pretty. ;)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Testing task
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The `User` and `UserDetail` component are both missing tests. Add sensible tests to at least one of the components. 
+
+Also one test in `UserListItem` currently breaks. Please fit it and also remove th underlying problem why the bug appeared. 
+
+
+### Bug hunt
+
+1. On http://localhost:3000/users an error message is displayed in the console regarding a "key" prop. Please remove that message.
+2. In src/users/Users.tsx there currently is a workaround (the if-statement). If that is removed, the API request is repeated indefinitely. Please remove the workaround and replace it with a "best practices" solution. 
