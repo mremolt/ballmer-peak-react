@@ -15,11 +15,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Please choose one of the following tasks. 
 Optional: If you finish the first one in time, you may of course take another. 
 
-### Infrastructure task
-
-The test suite currently throws an error. 
-Please make all existing tests pass.
-
 ### UX task 
 
 The users detail page currently only shows the raw data. 
@@ -59,3 +54,8 @@ Also one test in `UserListItem` currently breaks. Please fix the test and also r
 1. On http://localhost:3000/users an error message is displayed in the console regarding a "key" prop. Please remove that message.
 2. The User Email is currently not displayed in the list of Users. Please fix the `UserListItem` Component and also remove the underlying problem why the bug appeared. 
 3. In src/users/Users.tsx there currently is a workaround (the if-statement). If that is removed, the API request is repeated indefinitely. Please remove the workaround and replace it with a "best practices" solution. 
+
+### Build task
+
+The test suite currently throws an error. 
+Please make all existing tests pass und also fix the underlying problem, which caused the error to slip in.
